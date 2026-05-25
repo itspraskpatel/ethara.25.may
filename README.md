@@ -9,7 +9,7 @@ The application is designed to handle a large user base (~100 concurrent users) 
 ## Repository Structure
 
 ```
-ethara-final/
+chatGPTCode/
 ├── prompt.md                          # Project requirements and specifications
 ├── README.md                           # Project documentation
 │
