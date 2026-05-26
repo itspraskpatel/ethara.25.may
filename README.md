@@ -4,16 +4,11 @@
 
 It is a modern, full-stack collaborative drawing board application with a Modern Look built with Next.js that enables real-time drawing and collaboration. The application features an infinite drawing board with multiple drawing tools(like square,circle etc.), allowing users to create and share interactive whiteboard experiences. Users can enter their display name upon landing and optionally provide an email for enhanced features. The platform uses browser-based user identification combined with IP tracking for security and user management.
 
-The application is designed to handle a large user base (~100 concurrent users) with high performance optimization(which can scale). Real-time collaboration is powered by Industry tested Socket.io, enabling multiple users to work simultaneously on the same board. The left sidebar provides a solid comprehensive UI for color selection, marker thickness adjustment, shape types (solid/wireframe), and opacity control. Users can easily share boards via embedded links so the interactions among become simpler, and it also displays active user count for transparency and usability. It also features a responsive design that works flawlessly across desktop, tablet, and mobile phones, with smooth animations and micro-interactions throughout the UI/UX. Backend security is enforced through rate limiting users to prevent DDoS attacks, and structured error handling with hourly changing log file rotation.
 
 ## Repository Structure
 
 ```
-chatGPTCode/
-├── prompt.md                          # Project requirements and specifications
-├── README.md                           # Project documentation
-│
-├── chatGPTCode/                        # Main Next.js application
+├── goldenResponse/                    # Main Next.js application
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── api/                   # API routes
@@ -75,32 +70,39 @@ chatGPTCode/
 │   ├── prisma.config.ts               # Prisma configuration
 │   ├── LOG/                           # Application logs
 │   └── README.md
-│
-└── geminiCode/                        # Alternative implementation
-    ├── src/
-    │   ├── app/
-    │   │   ├── api/
-    │   │   │   └── users/
-    │   │   ├── layout.tsx
-    │   │   ├── page.tsx
-    │   │   └── globals.css
-    │   └── components/
-    │       ├── CanvasBoard.tsx
-    │       ├── LandingModal.tsx
-    │       ├── SidePanel.tsx
-    │       └── Toolbar.tsx
-    ├── prisma/
-    │   └── schema.prisma
-    ├── package.json
-    ├── tsconfig.json
-    └── server.js
 ```
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Backend | Node.js, Next.js, , Zod |
+| Database | Prisma (PostgreSQL) |
+| Auth | IP based Authentication |
+| Frontend | Lucid React , Tailwind CSS, Framer Motion |
+
+
+
+## Environment Variables
+
+| Variable | Description | Example |
+|----------|-------------|---------|
+| `PORT` | Server port | `3000` |
+| `DATABASE_URL` | POSTGRES connection string | `mongodb://localhost:27017/bookmarksync` |
+
+
+## Prerequisites
+
+- Node.js v20.x+
+- PostgreSQL (get free DB instance [Neon DB](https://console.neon.tech/))
+- Any Chromium based browser
+
+
 ## Instructions for running/testing the code
 
 Just go to the desired project folder(chatGPTCode, geminiCode, goldenResponse) same instructions for all
 
 Step 1: npm i
-Step 2: add database url to .env
-Step 3: npx prisma generate
-Step 4: npx prisma db push
-Step 5: npm run dev
+Step 2: npx prisma generate
+Step 3: npx prisma db push
+Step 4: npm run dev
