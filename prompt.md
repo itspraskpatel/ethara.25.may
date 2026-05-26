@@ -88,6 +88,14 @@ Tech Stack :
 Frameworks:
 
 BACKEND:
-	NextJS, Socket.io, Prisma(PostgreSQL) ,dotenv ,zod,  add more as per requirement
+	NextJS: Full-stack React framework with built-in API routes especializing server-side rendering for better performance and reduced server load.
+	Socket.io: Real-time communication protocol library for real collaborative drawing and live user presence updates.
+	Prisma: Modern industry tested type-safe ORM for PostgreSQL with query optimization and efficient data handling, reducing database costs and improving response times.
+	dotenv: Secure environment variable management for storing sensitive credentials (API keys, database URLs) without exposing them in source code.
+	zod: TypeScript-first schema validation library ensuring data integrity across frontend and backend, preventing invalid data from reaching the database.
+	Rate-limiter (express-rate-limit): DDoS protection middleware to throttle requests and prevent abuse from single IP addresses.
+	
 FRONTEND : 
-	Lucid React , Tailwind CSS, Framer Motion , add more as per requirement
+	Lucid React: Lightweight, modern looking icon library with minimal bundle size, designed for responsive UI icons.
+	Tailwind CSS: Popular CSS framework allowing responsive UI development with consistent styling.
+	Framer Motion: High-performance animation library optimized for smooth micro-interactions and transitions, ensuring jitter-free experience even on mid-range devices.
