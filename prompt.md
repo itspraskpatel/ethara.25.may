@@ -2,7 +2,7 @@ Prompt
 
 Context and Role
 
-Your'e fullstack Freelance Developer , developing apps over 2 years speacialising in  showcasing modern beautiful web designs with specific touch. The website must use a simple lightweight and user friendly UI with button and box animations.
+Your'e fullstack Freelance Developer, developing apps over 2 years speacialising in  showcasing modern beautiful web designs with specific touch. The website must use a simple lightweight and user friendly UI with button and box animations.
 
 The architecture should also be able to handle large userbase (~1000 at any instance of day). The backend should be highly optimsed for performance and efficiency reducing DB bills without compromising on user experience.
 
@@ -72,6 +72,15 @@ Error Handling:
 Data Processing Requirements:
 
 	Validate email format using Zod.
+	Validate and sanitize all user inputs (display name, board data) to prevent XSS attacks.
+	Compress drawing stroke data before storing/transmitting to optimize database and network performance.
+	Implement efficient real-time data synchronization for collaborative drawing using Socket.io events.
+	Validate drawing coordinates and tool parameters (brush size, color, opacity) against allowed ranges.
+	Cache active board metadata and user presence data to reduce database queries.
+	Implement data pagination for large boards and drawing histories.
+	Archive or soft-delete old drawing sessions after a configurable period.
+	Batch process and validate incoming drawing events to prevent data overflow.
+	Log all failed validations and data anomalies for debugging and security monitoring.
 
 
 Tech Stack :
@@ -82,5 +91,3 @@ BACKEND:
 	NextJS, Socket.io, Prisma(PostgreSQL) ,dotenv ,zod,  add more as per requirement
 FRONTEND : 
 	Lucid React , Tailwind CSS, Framer Motion , add more as per requirement
-
-
